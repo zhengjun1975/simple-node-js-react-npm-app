@@ -7,6 +7,11 @@ pipeline {
 
   }
   stages {
+    stage('deploy 10.10.10.95') {
+      agent {
+        label "docker"
+      }
+  stages {
     stage('build') {
       steps {
         sh 'npm install'
